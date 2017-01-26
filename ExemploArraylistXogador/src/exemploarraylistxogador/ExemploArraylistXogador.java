@@ -29,7 +29,14 @@ public class ExemploArraylistXogador {
          int opcion;
          
          do{
-          opcion = Integer.parseInt(JOptionPane.showInputDialog("***MENU***\n1 Cargar Lista \n2 Amosar Iterator\n3 Amosar for each \n4 Ordenar \n5 Salir"));
+             try{
+                 opcion=Integer.parseInt(JOptionPane.showInputDialog("***MENU***\n1 Cargar Lista \n2 Amosar Iterator\n3 Amosar for each \n4 Ordenar \n5 Salir"));
+                 
+             }catch(Exception ex){
+                 System.out.println(ex.getMessage());
+                 opcion=0;
+             }
+          //opcion = Integer.parseInt(JOptionPane.showInputDialog("***MENU***\n1 Cargar Lista \n2 Amosar Iterator\n3 Amosar for each \n4 Ordenar \n5 Salir"));
         switch(opcion){
             case 1: equi.cargarLista();
                 break;
