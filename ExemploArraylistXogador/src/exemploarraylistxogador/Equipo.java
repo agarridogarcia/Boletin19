@@ -48,6 +48,9 @@ public class Equipo {
     public void ordenar(){
         Collections.sort(Equipo);
     }
-    
+    public void darDeBaixa(){
+        Equipo.remove(new Integer(pedirDorsal()));
+        
+    }
 
 }
