@@ -8,6 +8,7 @@ package exemploarraylistxogador;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.Objects;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,6 +42,9 @@ public class Equipo {
         
     }
     }
+    /**
+     * amosar con un for each
+     */
     public void amosar2(){
         for(Xogador ele: Equipo)
             System.out.println("--" + ele);
@@ -49,8 +53,17 @@ public class Equipo {
         Collections.sort(Equipo);
     }
     public void darDeBaixa(){
-        Equipo.remove(new Integer(pedirDorsal()));
+        Equipo.remove(new Xogador (pedirDorsal(),pedirNome()));
         
     }
+    public void buscar(){
+        if(Equipo.contains(new Xogador (pedirDorsal(),pedirNome())))
+            System.out.println("Está ");
+        else
+            System.out.println("Non está ");
+        
+    }
+
+   
 
 }

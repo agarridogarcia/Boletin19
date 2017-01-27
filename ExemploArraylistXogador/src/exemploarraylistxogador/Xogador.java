@@ -5,6 +5,8 @@
  */
 package exemploarraylistxogador;
 
+import java.util.Objects;
+
 /**
  *
  * @author agarridogarcia
@@ -42,7 +44,11 @@ public class Xogador implements Comparable{
         return "Xogador{" + "dorsal=" + dorsal + ", nome=" + nome + '}';
     }
     
-   
+   /**
+    * 
+    * @param o metodo para ordenar
+    * @return 
+    */
     public int compareTo(Object o){
         Xogador xog=(Xogador)o;
         
@@ -55,4 +61,30 @@ public class Xogador implements Comparable{
             return -1;
         
     }
+    //sirve para borrar xogador
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 41 * hash + Objects.hashCode(this.nome);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Xogador other = (Xogador) obj;
+        if (this.dorsal != other.dorsal) {
+            return false;
+        }
+        if (!Objects.equals(this.nome, other.nome)) {
+            return false;
+        }
+        return true;
+    }
+    
 }

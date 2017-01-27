@@ -30,7 +30,7 @@ public class ExemploArraylistXogador {
          
          do{
              try{
-                 opcion=Integer.parseInt(JOptionPane.showInputDialog("***MENU***\n1 Cargar Lista \n2 Amosar Iterator\n3 Amosar for each \n4 Ordenar \n5 Dar de Baixa \n6 Salir"));
+                 opcion=Integer.parseInt(JOptionPane.showInputDialog("***MENU***\n1 Cargar Lista \n2 Amosar Iterator\n3 Amosar for each \n4 Ordenar \n5 Dar de Baixa \n6 Buscar \n7 Salir"));
                  
              }catch(Exception ex){
                  System.out.println(ex.getMessage());
@@ -48,11 +48,13 @@ public class ExemploArraylistXogador {
                 break;
             case 5:equi.darDeBaixa();
                 break;
-            case 6:System.exit(0);
+            case 6:equi.buscar();
+                break;
+            case 7:System.exit(0);
             
     }
     
-}while(opcion<6);
+}while(opcion<7);
     
 }
 }
