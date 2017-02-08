@@ -43,7 +43,7 @@ public void vender(){
                
              if(libreria1.get(i).getNumExemplares()>=li.numExemplares){
                    
-                 //  libreria1.get(i).setNumExemplares(libreria1.get(i).getNumExemplares()-li.numExemplares);
+               
                  libreria1.get(i).setNumExemplares((libreria1.get(i).numExemplares -li.numExemplares ));
              }else
                  System.out.println("Non hai unidades suficientes deste exemplar dispoñibles");

@@ -58,7 +58,7 @@ public class Libro {
         return numExemplares;
     }
 
-    public void setNumExemplares(int numUnidades) {
+    public void setNumExemplares(int numExemplares) {
         this.numExemplares= numExemplares;
     }
 
