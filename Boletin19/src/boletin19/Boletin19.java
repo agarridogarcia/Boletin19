@@ -12,7 +12,7 @@ public class Boletin19 {
          
          do{
              try{
-                 opcion=Integer.parseInt(JOptionPane.showInputDialog("***MENU***\n1 Cargar Libros \n2 Amosar libros con Iterator \n3 Vender \n4 Borrar libros que se acabaron \n5 Consultar libro \n6 Salir"));
+                 opcion=Integer.parseInt(JOptionPane.showInputDialog("***MENU***\n1 Cargar Libros \n2 Amosar libros con Iterator \n3 Vender \n4 Borrar libros que se acabaron \n5 Consultar libro \n6 Ordenar por titulo \n7 Salir"));
                  
              }catch(Exception ex){
                  System.out.println(ex.getMessage());
@@ -29,12 +29,14 @@ public class Boletin19 {
                 break;
             case 5:li.consultarLibro();
                 break;
+            case 6:li.ordenar();
+                break;
             
-            case 6:System.exit(0);
+            case 7:System.exit(0);
             
     }
     
-}while(opcion<6);
+}while(opcion<7);
 
     
 }

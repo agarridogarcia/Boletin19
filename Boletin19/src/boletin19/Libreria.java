@@ -2,6 +2,7 @@
 package boletin19;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import javax.swing.JOptionPane;
 import libreriaaraceli.LibreriaAraceli;
@@ -28,6 +29,7 @@ public class Libreria {
     
     }
     public void amosar(){
+   
     Iterator <Libro> meu_iterator=libreria1.iterator();
     while(meu_iterator.hasNext()){
             System.out.println(meu_iterator.next());
@@ -81,4 +83,9 @@ public void consultarLibro(){
                 System.out.println("O libro non está na lista");
             
 }
+public void ordenar(){
+    Collections.sort(libreria1);
+    
+    }
 }
+

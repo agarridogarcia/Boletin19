@@ -4,7 +4,7 @@ package boletin19;
 import java.util.Objects;
 
 
-public class Libro {
+public class Libro implements Comparable{
     String titulo,isbn,autor;
     int numExemplares;
     float precio;
@@ -90,6 +90,20 @@ public class Libro {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+      Libro li=(Libro)o;
+        
+        if(this.titulo.compareToIgnoreCase(li.titulo)==0)
+        return 0;
+       
+        else if (this.titulo.compareToIgnoreCase(li.titulo)>0)
+            return 1;
+        else
+            return -1;
+        
     }
 
    
